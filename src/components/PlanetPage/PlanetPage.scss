@@ -1,5 +1,5 @@
 .planet-page {
-    
+
     &__title {
         margin-bottom: 2rem;
     }
@@ -21,12 +21,17 @@
         font-weight: 600;
     }
 
-    &__data {
-
-    }
+    &__data {}
 
     &__data-super-script {
         font-size: 0.75rem;
 
     }
+}
+
+.planet__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }

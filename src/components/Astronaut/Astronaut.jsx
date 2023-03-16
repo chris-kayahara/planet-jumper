@@ -7,28 +7,26 @@ function Astronaut(props) {
 
     useEffect(() => {
         const handleKeyPress = (event) => {
-            if (event.code === 'Space') {
+            if (event.code === "Space") {
                 jumpAvatar();
             }
         };
 
-        window.addEventListener('keydown', handleKeyPress);
+        window.addEventListener("keydown", handleKeyPress);
 
         return () => {
-            window.removeEventListener('keydown', handleKeyPress);
+            window.removeEventListener("keydown", handleKeyPress);
         };
-    },);
+    }, []);
 
     const baseJumpHeightOrVelocity = 100; // Adjust this value to set the base jump height or velocity
     const earthGravity = 9.81;
-    const jumpHeightOrVelocity = props.planet && props.planet.gravity
-        ? baseJumpHeightOrVelocity * (earthGravity / props.planet.gravity)
-        : baseJumpHeightOrVelocity;
+    const gravity = props.planet?.gravity || earthGravity;
+    const jumpHeightOrVelocity =
+        baseJumpHeightOrVelocity * (earthGravity / gravity);
 
     const baseTransitionDuration = 0.5; // Adjust this value to set the base transition duration (in seconds)
-    const transitionDuration = props.planet && props.planet.gravity
-        ? baseTransitionDuration * (earthGravity / props.planet.gravity)
-        : baseTransitionDuration;
+    const transitionDuration = baseTransitionDuration * (earthGravity / gravity);
 
     const jumpAvatar = () => {
         if (!isJumping) {
@@ -37,18 +35,18 @@ function Astronaut(props) {
                 setIsJumping(false);
             }, transitionDuration * 1000); // Convert to milliseconds
         }
-
     };
+
     return (
         <>
-            <div className='avatar__container'>
+            <div className="avatar__container">
                 <img
-                    className='avatar'
+                    className="avatar"
                     src={AstroImg}
                     alt="Avatar"
                     style={{
-                        transform: isJumping ? `translateY(-${jumpHeightOrVelocity}px)` : '',
-                        transition: `transform ${transitionDuration}s ease`
+                        transform: isJumping ? `translateY(-${jumpHeightOrVelocity}px)` : "",
+                        transition: `transform ${transitionDuration}s ease`,
                     }}
                 />
             </div>
