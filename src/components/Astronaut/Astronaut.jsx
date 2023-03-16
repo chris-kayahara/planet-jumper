@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Astronaut.scss';
 import AstroImg from '../../assets/Images/SpaceAvatar.png';
 
-function Astronaut(props) {
+function Astronaut(props, planet) {
     const [isJumping, setIsJumping] = useState(false);
 
     useEffect(() => {
