@@ -1,6 +1,4 @@
 import './LandingPage.scss'
-import HeaderImage from '../../assets/Images/Header.png'
-import HamburgerNav from '../HamburgerDropDown/Hamburger';
 import Astronaut from '../Astronaut/Astronaut';
 
 function LandingPage() {
@@ -14,10 +12,7 @@ function LandingPage() {
         <>
             <header>
                 <div className='header'>
-                    {/* <h1 className='header__text'>PLANET JUMPER</h1> */}
-                    <img src={HeaderImage} className="header__text" alt="Header" />
                     <div>
-                        <HamburgerNav />
                     </div>
                 </div>
                 <Astronaut planet={planet} />
