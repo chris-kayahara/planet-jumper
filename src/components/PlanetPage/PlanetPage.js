@@ -4,6 +4,8 @@ import axios from 'axios'
 
 import Preloader from '../Preloader/Preloader'
 
+import './PlanetPage.scss'
+
 const API_URL = "https://api.le-systeme-solaire.net/rest.php/bodies?data=%5C&filter%5B%5D=englishName%2Ceq%2C";
 const API_QUERY_END = "&filter%5B%5D=";
 
@@ -35,41 +37,48 @@ export default function PlanetPage() {
     }
 
     const name = currentPlanet.englishName;
-    const moons = currentPlanet.moons.length;
-    const distanceFromSun = currentPlanet.semimajorAxis;
+    let moons = 0;
+    if (currentPlanet.moons === null) {
+        moons = 0;
+    } else {
+        moons = currentPlanet.moons.length;
+    }
+    const distanceFromSun = currentPlanet.semimajorAxis.toLocaleString();
     const massValue = currentPlanet.mass.massValue;
     const massExp = currentPlanet.mass.massExponent;
     const volValue = currentPlanet.vol.volValue;
     const volExp = currentPlanet.vol.volExponent;
     const gravity = currentPlanet.gravity;
-    const escapeVel = currentPlanet.escape;
+    const escapeVel = currentPlanet.escape.toLocaleString();
 
     return (
-        <div>
-            <h2>{name}</h2>
-            <div>
-                <p>Number of moons:</p>
-                <p>{moons}</p>
-            </div>
-            <div>
-                <p>Distance from Sun:</p>
-                <p>{distanceFromSun}</p>
-            </div>
-            <div>
-                <p>Mass:</p>
-                <p>{massValue} x 10<span>{massExp}</span></p>
-            </div>
-            <div>
-                <p>Volume:</p>
-                <p>{volValue} x 10<span>{volExp}</span></p>
-            </div>
-            <div>
-                <p>Gravity:</p>
-                <p>{gravity}</p>
-            </div>
-            <div>
-                <p>Escape Velocity</p>
-                <p>{escapeVel}</p>
+        <div className="planet-page">
+            <h2 className="planet-page__title">{name}</h2>
+            <div className="planet-page__data-container">
+                <div className="planet-page__data-row">
+                    <p className="planet-page__data-heading">Number of moons:</p>
+                    <p className="planet-page__data">{moons}</p>
+                </div>
+                <div className="planet-page__data-row">
+                    <p className="planet-page__data-heading">Distance from Sun:</p>
+                    <p className="planet-page__data">{distanceFromSun} km</p>
+                </div>
+                <div className="planet-page__data-row">
+                    <p className="planet-page__data-heading">Mass:</p>
+                    <p className="planet-page__data">{massValue} x 10<sup className="planet-page__data-super-script">{massExp}</sup> kg</p>
+                </div>
+                <div className="planet-page__data-row">
+                    <p className="planet-page__data-heading">Volume:</p>
+                    <p className="planet-page__data">{volValue} x 10<sup className="planet-page__data-super-script">{volExp}</sup></p>
+                </div>
+                <div className="planet-page__data-row">
+                    <p className="planet-page__data-heading">Gravity:</p>
+                    <p className="planet-page__data">{gravity} m/s<sup className="planet-page__data-super-script">2</sup></p>
+                </div>
+                <div className="planet-page__data-row">
+                    <p className="planet-page__data-heading">Escape Velocity</p>
+                    <p className="planet-page__data">{escapeVel} m/s</p>
+                </div>
             </div>
         </div>
     )
