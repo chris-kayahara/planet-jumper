@@ -5,11 +5,19 @@
     justify-content: space-between;
     align-items: center;
 
+    &__title {
+        width: 35rem;
+    }
+
+    &__nav {
+        width: 100%;
+    }
+
     &__nav-list {
+
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         list-style: none;
-        gap: 4rem;
     }
 }
