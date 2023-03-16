@@ -1,0 +1,29 @@
+@use "./partials/font";
+@use "./partials/variables" as *;
+
+// Global Styles
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Avenir', sans-serif;
+    font-weight: 400;
+    color: $primary-white;
+}
+
+a, a:visited {
+    color: $primary-white;
+    display: block;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3rem;;
+}
