@@ -1,8 +1,15 @@
 import './LandingPage.scss'
 import HeaderImage from '../../assets/Images/Header.png'
 import HamburgerNav from '../HamburgerDropDown/Hamburger';
+import Astronaut from '../Astronaut/Astronaut';
 
 function LandingPage() {
+
+    const planet = {
+        name: 'Mars',
+        gravity: 3.8, // Mars gravity in m/s²
+    };
+
     return (
         <>
             <header>
@@ -13,6 +20,7 @@ function LandingPage() {
                         <HamburgerNav />
                     </div>
                 </div>
+                <Astronaut planet={planet} />
 
             </header>
         </>
