@@ -1,0 +1,17 @@
+.header {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+
+    &__text {
+        width: 70%;
+        height: 5rem;
+
+    }
+}
+
+body {
+    background-color: black;
+}
