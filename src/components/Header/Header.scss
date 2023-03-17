@@ -6,7 +6,8 @@
     align-items: center;
 
     &__title {
-        width: 35rem;
+        width: 29rem;
+        flex-shrink: 0;
     }
 
     &__nav {
@@ -16,9 +17,8 @@
     &__nav-list {
         display: flex;
         flex-direction: row;
-        justify-content: end;
+        justify-content: space-between;
         list-style: none;
-        gap: 4rem;
         margin-left: auto;
     }
 

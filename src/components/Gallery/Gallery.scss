@@ -1,3 +1,5 @@
+@use "../../partials/variables" as *;
+
 .gallery {
     margin: 0 auto;
 }
@@ -13,8 +15,9 @@
 .gallery__image {
     width: 20rem;
     height: 15rem;
-    border: 5px solid darkgrey;
+    border: 5px solid $primary-white;;
     object-fit: cover;
+    border-radius: .5rem;
 }
 
 .gallery__heading {

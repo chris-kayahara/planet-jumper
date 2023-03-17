@@ -1,5 +1,7 @@
+@use "../../partials/variables" as *;
+
 .preloader {
-    color: black;
+    color: $primary-white;
     position: fixed;
     top: 50%;
     left: 50%;
