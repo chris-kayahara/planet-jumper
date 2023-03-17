@@ -7,8 +7,8 @@ import Preloader from '../Preloader/Preloader'
 import Planet from '../Planet/Planet'
 
 import './PlanetPage.scss'
+import Gallery from '../Gallery/Gallery'
 
-import mercuryImage from '../../assets/Images/Mercury.jpeg';
 
 const API_URL = "https://api.le-systeme-solaire.net/rest.php/bodies?data=%5C&filter%5B%5D=englishName%2Ceq%2C";
 const API_QUERY_END = "&filter%5B%5D=";
@@ -90,12 +90,14 @@ export default function PlanetPage() {
                     </div>
                 </div>
                 <div className="planet-page__planet-container">
-                    <Planet planet={planet}/>
+                    <Planet planet={planet} />
                 </div>
                 <div className="planet-page__astronaut-container">
                     <Astronaut planet={currentPlanet} />
                 </div>
             </div>
+            <Gallery planet={planet} />
+
         </div>
     );
 }
