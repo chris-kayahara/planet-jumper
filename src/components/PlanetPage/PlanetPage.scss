@@ -1,11 +1,23 @@
 .planet-page {
 
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    &__info {
+        max-width: 30rem;
+        margin-right: 10rem;
+    }
+
     &__title {
         margin-bottom: 2rem;
     }
 
     &__data-container {
-        max-width: 20rem;
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
@@ -15,23 +27,27 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 2rem;
     }
 
     &__data-heading {
         font-weight: 600;
     }
 
-    &__data {}
+    &__data {
+
+    }
 
     &__data-super-script {
         font-size: 0.75rem;
 
     }
-}
 
-.planet__container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    &__planet-container {
+
+    }
+
+    &__astronaut-container {
+        margin-left: 4rem;
+    }
 }
