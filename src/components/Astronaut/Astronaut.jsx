@@ -17,7 +17,7 @@ function Astronaut(props) {
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, []);
+    }, [props.planet]);
 
     useEffect(() => {
         const handleKeyPress = (event) => {
@@ -31,7 +31,7 @@ function Astronaut(props) {
         return () => {
             window.removeEventListener("keydown", handleKeyPress);
         };
-    }, []);
+    }, [props.planet]);
 
     useEffect(() => {
         if (jumpOnMount) {
@@ -39,6 +39,7 @@ function Astronaut(props) {
             jumpAvatar();
         }
     }, [jumpOnMount]);
+
 
     //this use effect listens for a keydown press of space bar in order to make the astronaut jump and passes the planet.gravity
     //which will inherently change the jump height of the avatar depedning on the gravity data that is passed. If no planet gravity
