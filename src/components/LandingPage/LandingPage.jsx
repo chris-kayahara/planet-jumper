@@ -12,6 +12,9 @@ function LandingPage() {
             <header>
                 <div className='header'>
                     <div>
+                        <div class="word-bubble">
+                            <p className='word-bubble-text'>Click a Planet to Learn About it!!</p>
+                        </div>
                     </div>
                 </div>
                 <Astronaut planet={planet} />
