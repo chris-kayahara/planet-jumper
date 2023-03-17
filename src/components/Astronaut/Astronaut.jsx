@@ -7,6 +7,18 @@ function Astronaut(props, planet) {
     //state here keeps track of wether the astronaut is jumping or not 
 
     useEffect(() => {
+        const handleKeyDown = (event) => {
+            if (event.keyCode === 32) { // spacebar keycode
+                event.preventDefault();
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
+
+    useEffect(() => {
         const handleKeyPress = (event) => {
             if (event.code === "Space") {
                 jumpAvatar();
