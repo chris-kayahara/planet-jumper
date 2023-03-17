@@ -8,7 +8,6 @@ import Planet from '../Planet/Planet'
 
 import './PlanetPage.scss'
 
-import mercuryImage from '../../assets/Images/Mercury.jpeg';
 
 const API_URL = "https://api.le-systeme-solaire.net/rest.php/bodies?data=%5C&filter%5B%5D=englishName%2Ceq%2C";
 const API_QUERY_END = "&filter%5B%5D=";
@@ -71,7 +70,7 @@ export default function PlanetPage() {
                                 {currentPlanet.vol.volValue} x 10
                                 <sup className="planet-page__data-super-script">
                                     {currentPlanet.vol.volExponent}
-                                </sup>
+                                </sup> km<sup className="planet-page__data-super-script">3</sup>
                             </p>
                         </div>
                         <div className="planet-page__data-row">

@@ -12,16 +12,15 @@ body {
     font-family: 'Avenir', sans-serif;
     font-weight: 400;
     color: $primary-white;
+    // margin: 0; 
+    // height: 100%; 
+    // overflow: hidden
 }
 
 a, a:visited {
     color: $primary-white;
     display: block;
     text-decoration: none;
-}
-
-a:hover {
-    font-weight: 700;
 }
 
 h1 {

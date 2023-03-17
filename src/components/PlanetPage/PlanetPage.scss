@@ -1,16 +1,27 @@
 .planet-page {
+    background-image: url('../../assets/Images/background-stars.jpg');
+    background-size: cover;
+    height: 100vh;
 
     &__content {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        
+        top: 50%;
+        -ms-transform: translateY(20%);
+        transform: translateY(20%);
+        margin: 0 auto;
     }
 
     &__info {
-        max-width: 30rem;
+        width: 23rem;
+        background-color: rgba($color: #141414, $alpha: 0.5);
+        backdrop-filter: blur(2px);
         margin-right: 10rem;
+        margin-left: 3rem;
+        padding: 1.5rem;
+        border-radius: .5rem;
     }
 
     &__title {
