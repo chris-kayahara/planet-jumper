@@ -8,9 +8,6 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        top: 50%;
-        -ms-transform: translateY(20%);
-        transform: translateY(20%);
         margin: 0 auto;
     }
 
@@ -18,8 +15,7 @@
         width: 23rem;
         background-color: rgba($color: #141414, $alpha: 0.5);
         backdrop-filter: blur(2px);
-        margin-right: 10rem;
-        margin-left: 3rem;
+        margin-right: 5rem;
         padding: 1.5rem;
         border-radius: .5rem;
     }
@@ -51,7 +47,6 @@
 
     &__data-super-script {
         font-size: 0.75rem;
-
     }
 
     &__planet-container {
@@ -59,6 +54,10 @@
     }
 
     &__astronaut-container {
+        object-position: center;
+        margin-top: 10rem;
         margin-left: 4rem;
+        margin-right: 4rem;
+        height: 34rem;
     }
 }

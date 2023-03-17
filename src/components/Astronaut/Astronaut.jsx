@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Astronaut.scss';
-import AstroImg from '../../assets/Images/SpaceAvatar.png';
+import AstroImg from '../../assets/Images/astro-guy.svg';
 
 function Astronaut(props, planet) {
     const [isJumping, setIsJumping] = useState(false);
@@ -50,7 +50,6 @@ function Astronaut(props, planet) {
 
     return (
         <>
-            <div className="avatar__container">
                 <img
                     className="avatar"
                     src={AstroImg}
@@ -60,7 +59,6 @@ function Astronaut(props, planet) {
                         transition: `transform ${transitionDuration}s ease`,
                     }}
                 />
-            </div>
         </>
     );
 }
