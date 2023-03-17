@@ -62,15 +62,15 @@ function Astronaut(props, planet) {
 
     return (
         <>
-                <img
-                    className="avatar"
-                    src={AstroImg}
-                    alt="Avatar"
-                    style={{
-                        transform: isJumping ? `translateY(-${jumpHeightOrVelocity}px)` : "",
-                        transition: `transform ${transitionDuration}s ease`,
-                    }}
-                />
+            <img
+                className="avatar avatar__landingPage"
+                src={AstroImg}
+                alt="Avatar"
+                style={{
+                    transform: isJumping ? `translateY(-${jumpHeightOrVelocity}px)` : "",
+                    transition: `transform ${transitionDuration}s ease`,
+                }}
+            />
         </>
     );
 }
