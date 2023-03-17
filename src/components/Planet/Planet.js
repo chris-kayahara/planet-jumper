@@ -35,7 +35,7 @@ function Planet(props) {
     })
 
     return (
-        <img className="planet" src={planetImageSrc} alt="planet"/>
+        <img className="planet" src={planetImageSrc} alt="planet" />
     );
 }
 

@@ -1,0 +1,13 @@
+.gallery__image {
+    width: 20rem;
+    height: 15rem;
+    margin-left: 8rem;
+    border: 5px solid darkgrey;
+    object-fit: cover;
+}
+
+.gallery__heading {
+    text-align: center;
+    padding-bottom: 3rem;
+    padding-right: 3rem;
+}
