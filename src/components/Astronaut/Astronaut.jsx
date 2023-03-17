@@ -3,7 +3,7 @@ import './Astronaut.scss';
 import AstroImg from '../../assets/Images/astro-guy.svg';
 
 function Astronaut(props) {
-    const { planet, jumpOnMount } = props;
+    const { jumpOnMount } = props;
     const [isJumping, setIsJumping] = useState(false);
     //state here keeps track of wether the astronaut is jumping or not 
 

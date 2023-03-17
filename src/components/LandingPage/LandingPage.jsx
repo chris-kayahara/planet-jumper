@@ -9,6 +9,7 @@ import saturn from '../../assets/Images/saturn.svg'
 import uranus from '../../assets/Images/uranus.svg'
 import neptune from '../../assets/Images/neptune.svg'
 import pluto from '../../assets/Images/pluto.svg'
+import { Link } from 'react-router-dom';
 
 
 
@@ -35,15 +36,15 @@ function LandingPage() {
 
             </header>
             <div className='planet__images'>
-                <img className='planet__images--individual' src={mercury} alt="" />
-                <img className='planet__images--individual' src={venus} alt="" />
-                <img className='planet__images--individual' src={earth} alt="" />
-                <img className='planet__images--individual' src={mars} alt="" />
-                <img className='planet__images--individual' src={jupiter} alt="" />
-                <img className='planet__images--individual' src={saturn} alt="" />
-                <img className='planet__images--individual' src={uranus} alt="" />
-                <img className='planet__images--individual' src={neptune} alt="" />
-                <img className='planet__images--individual' src={pluto} alt="" />
+                <Link to="/mercury"><img className='planet__images--individual' src={mercury} alt="" /></Link>
+                <Link to="/venus"><img className='planet__images--individual' src={venus} alt="" /></Link>
+                <Link to="/earth"><img className='planet__images--individual' src={earth} alt="" /></Link>
+                <Link to="/mars"><img className='planet__images--individual' src={mars} alt="" /></Link>
+                <Link to="/jupiter"><img className='planet__images--individual' src={jupiter} alt="" /></Link>
+                <Link to="/saturn"><img className='planet__images--individual' src={saturn} alt="" /></Link>
+                <Link to="/uranus"><img className='planet__images--individual' src={uranus} alt="" /></Link>
+                <Link to="/neptune"><img className='planet__images--individual' src={neptune} alt="" /></Link>
+                <Link to="/pluto"><img className='planet__images--individual' src={pluto} alt="" /></Link>
             </div>
         </>
     );
