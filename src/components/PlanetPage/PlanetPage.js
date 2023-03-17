@@ -4,7 +4,6 @@ import axios from 'axios'
 import Astronaut from '../Astronaut/Astronaut'
 import Preloader from '../Preloader/Preloader'
 import './PlanetPage.scss'
-import mercuryImage from '../../assets/Images/Mercury.jpeg';
 
 
 
@@ -13,18 +12,6 @@ import mercuryImage from '../../assets/Images/Mercury.jpeg';
 
 const API_URL = "https://api.le-systeme-solaire.net/rest.php/bodies?data=%5C&filter%5B%5D=englishName%2Ceq%2C";
 const API_QUERY_END = "&filter%5B%5D=";
-
-const planetImages = {
-    mercury: mercuryImage,
-    // venus: venusImage,
-    // earth: earthImage,
-    // mars: marsImage,
-    // jupiter: jupiterImage,
-    // saturn: saturnImage,
-    // uranus: uranusImage,
-    // neptune: neptuneImage,
-    // pluto: plutoImage,
-};
 
 
 export default function PlanetPage() {
@@ -101,7 +88,7 @@ export default function PlanetPage() {
                     </div>
                 </div>
             </div>
-            <Astronaut planet={currentPlanet} planetImages={planetImages} />
+            <Astronaut planet={currentPlanet} />
         </div>
     );
 }
