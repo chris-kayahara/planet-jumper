@@ -26,7 +26,7 @@ function LandingPage() {
                 <div className='header'>
                     <div>
                         <div>
-                            <h1 className='text'>Click a Planet Above or Below to Learn About it!!</h1>
+                            <h1 className='text'>Click a Planet  👇</h1>
 
                         </div>
 
