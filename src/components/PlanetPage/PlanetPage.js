@@ -87,6 +87,9 @@ export default function PlanetPage() {
                                 {currentPlanet.escape.toLocaleString()} m/s
                             </p>
                         </div>
+                        <div className='data'>
+                            <p> Data acquired from: <br></br> https://api.le-systeme-solaire.net/</p>
+                        </div>
                     </div>
                 </div>
                 <div className="planet-page__planet-container">
@@ -94,6 +97,7 @@ export default function PlanetPage() {
                 </div>
                 <div className="planet-page__astronaut-container">
                     <Astronaut planet={currentPlanet} />
+                    <p className='jump__text'>Press 'space' bar to simulate jumping with current planet's gravity!</p>
                 </div>
             </div>
             <Gallery planet={planet} />

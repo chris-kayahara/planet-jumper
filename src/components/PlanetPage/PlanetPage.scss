@@ -42,17 +42,13 @@
         font-weight: 600;
     }
 
-    &__data {
-
-    }
+    &__data {}
 
     &__data-super-script {
         font-size: 0.75rem;
     }
 
-    &__planet-container {
-
-    }
+    &__planet-container {}
 
     &__astronaut-container {
         object-position: center;
@@ -61,4 +57,20 @@
         margin-right: 4rem;
         height: 34rem;
     }
+}
+
+.data {
+    font-size: .8rem;
+    padding-top: 1rem;
+}
+
+.jump__text {
+    padding-top: 1rem;
+    text-align: center;
+    width: 15rem;
+    font-size: 1.2rem;
+    background-color: white;
+    color: darkred;
+    border-radius: 10px;
+    padding: 1rem;
 }
