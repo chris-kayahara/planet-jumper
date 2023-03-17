@@ -59,10 +59,12 @@ body {
 
 .container {
     padding-left: 1rem;
+    max-width: 100rem;
+    margin: 0 auto;
 }
 
 .text {
-    width: 50rem;
+    width: 48rem;
     font-size: 2rem;
     position: absolute;
     top: 15rem;
