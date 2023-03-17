@@ -82,7 +82,7 @@ export default function PlanetPage() {
                             </p>
                         </div>
                         <div className="planet-page__data-row">
-                            <p className="planet-page__data-heading">Escape Velocity</p>
+                            <p className="planet-page__data-heading">Escape Velocity:</p>
                             <p className="planet-page__data">
                                 {currentPlanet.escape.toLocaleString()} m/s
                             </p>
