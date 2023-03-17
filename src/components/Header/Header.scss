@@ -1,5 +1,5 @@
 .header {
-    padding: 2rem;
+    padding: 2rem 4rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -14,10 +14,15 @@
     }
 
     &__nav-list {
-
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: end;
         list-style: none;
+        gap: 4rem;
+        margin-left: auto;
+    }
+
+    &__nav-item:hover{
+        transform: scale(1.1);
     }
 }

@@ -71,7 +71,7 @@ export default function PlanetPage() {
                                 {currentPlanet.vol.volValue} x 10
                                 <sup className="planet-page__data-super-script">
                                     {currentPlanet.vol.volExponent}
-                                </sup>
+                                </sup> km<sup className="planet-page__data-super-script">3</sup>
                             </p>
                         </div>
                         <div className="planet-page__data-row">
