@@ -5,9 +5,8 @@ import './Header.scss'
 export default function Header() {
     return (
         <header className="header">
-            <h1 className="header__title">
-                <Link to="/">PLANET JUMPER</Link>
-            </h1>            <nav className="header__nav">
+            <h1 className="header__title"><Link to="/">PLANET JUMPER</Link></h1>
+            <nav className="header__nav">
                 <ul className="header__nav-list">
                     <li className="header__nav-item"><Link to={`/mercury`}>MERCURY</Link></li>
                     <li className="header__nav-item"><Link to={`/venus`}>VENUS</Link></li>
