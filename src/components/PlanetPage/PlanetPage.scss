@@ -1,7 +1,7 @@
 .planet-page {
     background-image: url('../../assets/Images/background-stars.jpg');
     background-size: cover;
-    height: 100vh;
+    height: 45rem;
 
     &__content {
         display: flex;
@@ -15,7 +15,7 @@
         width: 23rem;
         background-color: rgba($color: #141414, $alpha: 0.5);
         backdrop-filter: blur(2px);
-        margin-right: 5rem;
+        margin-right: 7rem;
         padding: 1.5rem;
         border-radius: .5rem;
     }
