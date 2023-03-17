@@ -14,36 +14,48 @@
 
 body {
     background-color: #1b1b1b;
-    ;
+
 }
 
 
 .word-bubble {
     position: absolute;
     top: 13rem;
-    left: 39.5rem;
-    width: 200px;
-    height: 100px;
+    left: 40.5rem;
+    width: 500px;
+    height: 50px;
     background-color: white;
     border-radius: 10px;
-    padding: 10px;
+    padding: 11px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     margin: 20px;
 }
 
-.word-bubble::before {
-    content: "";
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-style: solid;
-    border-width: 0px 10px 20px 10px;
-    border-color: transparent transparent white transparent;
-}
+
 
 .word-bubble-text {
     color: darkred;
     text-align: center;
     font-size: 1.5rem;
+}
+
+.solar__image {
+    width: 100rem;
+}
+
+.planet__images {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 25rem;
+    left: 26rem;
+
+    &--individual {
+        padding: 1rem;
+    }
+
+}
+
+.container {
+    padding-left: 1rem;
 }

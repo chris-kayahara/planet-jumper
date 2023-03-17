@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './Astronaut.scss';
 import AstroImg from '../../assets/Images/astro-guy.svg';
 
-function Astronaut(props, planet) {
+function Astronaut(props) {
+    const { planet, jumpOnMount } = props;
     const [isJumping, setIsJumping] = useState(false);
     //state here keeps track of wether the astronaut is jumping or not 
 
@@ -31,6 +32,13 @@ function Astronaut(props, planet) {
             window.removeEventListener("keydown", handleKeyPress);
         };
     }, []);
+
+    useEffect(() => {
+        if (jumpOnMount) {
+            // Trigger the jumpAvatar function when the component mounts
+            jumpAvatar();
+        }
+    }, [jumpOnMount]);
 
     //this use effect listens for a keydown press of space bar in order to make the astronaut jump and passes the planet.gravity
     //which will inherently change the jump height of the avatar depedning on the gravity data that is passed. If no planet gravity
